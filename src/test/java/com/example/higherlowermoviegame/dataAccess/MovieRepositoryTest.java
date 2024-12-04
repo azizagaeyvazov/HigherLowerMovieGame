@@ -1,6 +1,6 @@
 package com.example.higherlowermoviegame.dataAccess;
 
-import com.example.higherlowermoviegame.Game;
+import com.example.higherlowermoviegame.console.Game;
 import com.example.higherlowermoviegame.service.MovieService;
 import com.example.higherlowermoviegame.entities.Movie;
 import com.example.higherlowermoviegame.enums.Category;

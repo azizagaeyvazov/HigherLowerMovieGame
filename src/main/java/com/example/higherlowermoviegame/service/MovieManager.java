@@ -10,20 +10,21 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-
 @Service
 @Slf4j
 @RequiredArgsConstructor
 public class MovieManager implements MovieService {
+
     ModelMapper mapper = new ModelMapper();
+
     private final MovieRepository movieRepository;
 
     private final HighestScoreService highestScoreService;
 
     public NewGameResponse startNewGame(String category, String selectedMode) {
 
-        Movie movie1 = movieRepository.findRandomMovie();
-        MovieResponse movieResponse1 = mapper.map(movie1, MovieResponse.class);
+        var movie1 = movieRepository.findRandomMovie();
+        var movieResponse1 = mapper.map(movie1, MovieResponse.class);
 
         Double movie1CategoryValue = movieResponse1.getValueByCategory(category);
         Movie movie2 = movieRepository.findRandomMovieWhereCategoryNotEqual(category, movie1CategoryValue);

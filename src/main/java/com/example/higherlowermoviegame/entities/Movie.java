@@ -21,7 +21,7 @@ public class Movie {
     private String originalTitle;
 
     @NotNull
-    @Column(name = "overview")
+    @Column(name = "overview", length = 1000)
     private String overview;
 
     @NotNull

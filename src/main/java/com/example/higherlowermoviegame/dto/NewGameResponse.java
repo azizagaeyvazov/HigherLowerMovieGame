@@ -8,6 +8,7 @@ import lombok.Data;
 public class NewGameResponse {
 
     MovieResponse movie1;
+
     MovieResponse movie2;
 
     int highestScore;

@@ -4,7 +4,6 @@ import com.example.higherlowermoviegame.dto.MovieResponse;
 import com.example.higherlowermoviegame.dto.NewGameResponse;
 import org.springframework.stereotype.Service;
 
-@Service
 public interface MovieService {
 
     boolean isDatabaseEmpty();

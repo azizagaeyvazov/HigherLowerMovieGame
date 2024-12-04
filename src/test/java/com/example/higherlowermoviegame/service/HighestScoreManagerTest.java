@@ -1,6 +1,6 @@
 package com.example.higherlowermoviegame.service;
 
-import com.example.higherlowermoviegame.Game;
+import com.example.higherlowermoviegame.console.Game;
 import com.example.higherlowermoviegame.dataAccess.HighestScoreRepository;
 import com.example.higherlowermoviegame.entities.HighestScoreEntity;
 import com.example.higherlowermoviegame.enums.Mode;

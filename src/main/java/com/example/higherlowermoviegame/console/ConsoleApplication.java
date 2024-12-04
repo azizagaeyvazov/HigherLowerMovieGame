@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 @Slf4j
 @AllArgsConstructor
 @SpringBootApplication(scanBasePackages = "com.example.higherlowermoviegame")
-@ConditionalOnProperty(name = "console.application.enabled", havingValue = "true")
+@ConditionalOnProperty(name = "console.application.enabled", havingValue = "false")
 public class ConsoleApplication implements CommandLineRunner {
     private final Game game;
     private final MovieService service;
@@ -21,7 +21,7 @@ public class ConsoleApplication implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         if (service.isDatabaseEmpty()) {
             log.error("App did not start properly. Database is empty!");
             System.exit(0);
