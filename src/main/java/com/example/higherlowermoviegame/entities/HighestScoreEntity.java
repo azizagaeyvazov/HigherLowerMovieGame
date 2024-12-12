@@ -5,21 +5,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table(name = "HIGHEST_SCORE")
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "HIGHEST_SCORE")
 public class HighestScoreEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    Long id;
+    private Long id;
 
-    @Column(name = "NORMAL_MODE")
-    Integer normalMode;
+    private Integer normalMode;
 
-    @Column(name = "HARD_MODE")
-    Integer hardMode;
+    private Integer hardMode;
 }

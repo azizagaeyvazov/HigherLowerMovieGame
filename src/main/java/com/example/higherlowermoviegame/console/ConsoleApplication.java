@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 @Slf4j
 @AllArgsConstructor
 @SpringBootApplication(scanBasePackages = "com.example.higherlowermoviegame")
-@ConditionalOnProperty(name = "console.application.enabled", havingValue = "false")
+@ConditionalOnProperty(name = "console.application.enabled", havingValue = "true")
 public class ConsoleApplication implements CommandLineRunner {
     private final Game game;
     private final MovieService service;
