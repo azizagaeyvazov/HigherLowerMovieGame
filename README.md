@@ -56,3 +56,18 @@ Refer to Swagger for detailed documentation and example requests.
 ## Database Initialization
 The application uses an **H2 database**. Upon startup, `schema.sql` initializes the database with random movie data.
 
+## Configuring Console and Web App
+
+**You can control the logging and which part of the application to run (console or web app) using the following settings in application.properties:**
+1. Run Web App Only: To hide console logs when running the web app, set:
+
+**application.properties:**
+# spring.main.web-application-type=none
+# logging.level.com.example.higherlowermoviegame.console=off
+
+2. Run Both Console and Web App: If you want to run both the console and web app, simply comment out or remove the line:
+
+**application.properties:**
+# spring.main.web-application-type=none
+**This will enable both the console and web application to run simultaneously.**
+

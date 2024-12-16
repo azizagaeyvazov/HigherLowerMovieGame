@@ -6,12 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 
 @Slf4j
 @AllArgsConstructor
 @SpringBootApplication(scanBasePackages = "com.example.higherlowermoviegame")
-@ConditionalOnProperty(name = "console.application.enabled", havingValue = "true")
 public class ConsoleApplication implements CommandLineRunner {
     private final Game game;
     private final MovieService service;
