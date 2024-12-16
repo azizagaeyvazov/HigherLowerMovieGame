@@ -12,19 +12,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/game")
+@RequestMapping("/higher-lower-game")
 @RequiredArgsConstructor
 public class MovieController {
 
     private final MovieService movieService;
 
-    @GetMapping("/startNewGame")
+    @GetMapping("/new-game")
     ResponseEntity<NewGameResponse> startNewGame(
             @RequestParam String selectedCategory, @RequestParam String selectedMode) {
         return ResponseEntity.status(HttpStatus.OK).body(movieService.startNewGame(selectedCategory, selectedMode));
     }
 
-    @GetMapping("/getNextMovie")
+    @GetMapping("/movie")
     ResponseEntity<MovieResponse> getNextMovie(@RequestParam String selectedMode, @RequestParam String selectedCategory,
                                @RequestParam Double movie1CategoryValue, @RequestParam int score) {
         return ResponseEntity.status(HttpStatus.OK).body(movieService.getNextMovie(selectedMode, selectedCategory, movie1CategoryValue, score));
